@@ -1,0 +1,144 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: #4abebd;
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  list-style-type: none;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 39.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  overflow: hidden;
+  box-shadow: 0 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-top,
+.card-left,
+.card-right {
+  padding: 2.5rem;
+}
+
+.card-top {
+  grid-column: 1 / 3;
+}
+
+.card-top-title {
+  color: var(--cyan);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-top-subtitle {
+  font-size: 0.9rem;
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+}
+.card-top-text {
+  color: var(--grayish-blue);
+}
+.card-left {
+  background-color: var(--cyan);
+}
+
+.card-left-title {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+}
+
+.card-price-text {
+  color: white;
+  margin-right: 1rem;
+}
+
+.card-price-type {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-price {
+  margin-bottom: 1rem;
+}
+.card-left-text {
+  color: white;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.card-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: var(--bright-yellow);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5px 4.5px 8px 0px rgb(0 0 0 / 26%);
+}
+
+.card-right {
+  background-color: var(--light-cyan);
+}
+
+.card-right-title {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.card-list-item {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.card-list-item:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 1rem;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    grid-auto-rows: repeat(3, auto);
+  }
+
+  .card-top,
+  .card-left,
+  .card-right {
+    padding: 1.5rem;
+  }
+  .card-top {
+    grid-column: 1/2;
+  }
+}
